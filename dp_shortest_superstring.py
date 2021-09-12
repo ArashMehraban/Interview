@@ -4,7 +4,7 @@ class Solution:
         cost = [[0]*N for _ in range(N)]
         for i in range(N):
             for j in range(N):
-                for k in range(min(len(words[i]), len(words[j])), -1,1):
+                for k in range(min(len(words[i]), len(words[j])), -1,-1):
                     if words[i][-k:] == words[j][:k]:
                         cost[i][j] = k
                         break
